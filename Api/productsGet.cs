@@ -20,6 +20,7 @@ public class ProductsGet
         [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "products")] HttpRequest req)
     {
         var products = await productData.GetProducts();
+        //Some more change
         return new OkObjectResult(products);
     }
 }
